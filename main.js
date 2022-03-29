@@ -17,5 +17,3 @@ function displayData(data) {
         // olList.appendChild(listElement);
     }
 }
-
-console.log('log main ', tasks);

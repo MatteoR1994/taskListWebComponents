@@ -28,20 +28,20 @@ class SuperLi extends HTMLLIElement {
                     let node;
                     if (key === 'doneDate') {
                         if (!objElement) {
-                            node = document.createTextNode('DoneDate assente');
+                            node = document.createTextNode(key.toUpperCase() + ' - ' + 'assente');
                         } else {
-                            node = document.createTextNode(key.toUpperCase() + ' - ' + new Date(objElement));
+                            node = document.createTextNode(key.toUpperCase() + ' - ' + new Date(objElement).toLocaleDateString('it-IT', { year:"numeric", month:"2-digit", day:"numeric", hour: 'numeric', minute: 'numeric'}));
                         }
                     } else {
                         if (key === 'tags') {
                             if (!objElement) {
-                                node = document.createTextNode('Tag assenti');
+                                node = document.createTextNode(key.toUpperCase() + ' - ' + 'assenti');
                             } else {
                                 node = document.createTextNode(key.toUpperCase() + ' - ' + objElement);
                             }
                         } else {
                             if (key === 'creationDate') {
-                                node = document.createTextNode(key.toUpperCase() + ' - ' + new Date(objElement));
+                                node = document.createTextNode(key.toUpperCase() + ' - ' + new Date(objElement).toLocaleDateString('it-IT', { year:"numeric", month:"2-digit", day:"numeric", hour: 'numeric', minute: 'numeric'}));
                             } else {
                                 node = document.createTextNode(key.toUpperCase() + ' - ' + objElement);
                             }
